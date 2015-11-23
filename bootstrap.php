@@ -32,9 +32,3 @@ return function (Dispatcher $events) {
       $event->post->content =  preg_replace('/(?<!\\\\)(?: ((?<!\\$)(?<!\\`)\\${1,2}(?!\\`)(?!\\$)))(.*(?R)?.*)(?<!\\\\)(?: ((?<!\\$)(?<!\\`)\\1(?!\\`)(?!\\$)))/mxU', '`\\1\\2\\3`', $text);
   });
 };
-
-/*
-Questa è l'espressione della forza:
-$$\vec{F} = -G \frac{m_1 m_2}{|\vec{r}^3|}\vec{r}$$
-Il segno $-$ davanti alla costante $G$ indica che la forza è attrattiva, ovvero è di verso opposto al vettore $\vec{r}$.
-*/
