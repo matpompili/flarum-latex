@@ -1,6 +1,18 @@
-app.initializers.add('matpompili-flarum-mathjax', function() {
-  var script = document.createElement("script");
-  script.type = "text/javascript";
-  script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-  document.getElementsByTagName("head")[0].appendChild(script);
+/*
+* This file is part of flarum-latex.
+*
+* (c) Matteo Pompili <matpompili@gmail.com>
+*
+* For the full copyright and license information, please view the LICENSE
+* file that was distributed with this source code.
+*/
+
+import { extend } from 'flarum/extend';
+import DiscussionPage from 'flarum/components/DiscussionPage';
+
+app.initializers.add('matpompili-flarum-latex', function() {
+  extend(DiscussionPage.prototype, 'view', function(vdom) {
+    //vdom.children.push('<script>alert("test");</script>');
+    renderMathInElement(document.body);
+  });
 });
