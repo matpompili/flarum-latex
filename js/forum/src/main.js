@@ -8,11 +8,23 @@
 */
 
 import { extend } from 'flarum/extend';
-import DiscussionPage from 'flarum/components/DiscussionPage';
+import CommentPost from 'flarum/components/CommentPost';
+//import Composer from 'flarum/components/Composer';
 
 app.initializers.add('matpompili-flarum-latex', function() {
-  extend(DiscussionPage.prototype, 'view', function(vdom) {
-    //vdom.children.push('<script>alert("test");</script>');
-    renderMathInElement(document.body);
+  extend(CommentPost.prototype, 'config', function() {
+    setTimeout(function(){
+      render(this.$('.Post-body'));
+    },50);
   });
 });
+
+function render(elem = document.body) {
+  renderMathInElement(document.body,{
+    "ignoredTags":["script", "noscript", "style", "textarea", "pre"],
+    "delimiters":[
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+    ]
+  });
+}
