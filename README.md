@@ -14,7 +14,9 @@ It supports:
 
 It also doesn't mess up with **Markdown** and **BBCode** extensions, so you can use all of them at the same time.
 
-![Imgur](http://i.imgur.com/BhEIDD0.png)
+This is how the previous paragraph will look like:
+
+![Imgur](http://i.imgur.com/BhEIDD0.png "This is how the previous paragraph will look like")
 
 ## Install
 Install flarum-latex is really easy:
