@@ -9,19 +9,21 @@
 
 import { extend } from 'flarum/extend';
 import CommentPost from 'flarum/components/CommentPost';
-//import Composer from 'flarum/components/Composer';
 
 app.initializers.add('matpompili-flarum-latex', function() {
+  //On every post loading
   extend(CommentPost.prototype, 'config', function() {
-    setTimeout(function(){
-      render(this.$('.Post-body'));
-    },50);
+      //Run KaTeX renderer on the single post (not on the entire page)
+      render(this.element);
   });
 });
 
+//This call KaTeX renderer with some options
 function render(elem = document.body) {
-  renderMathInElement(document.body,{
+  renderMathInElement(elem,{
+    //Do not render inside those tags
     "ignoredTags":["script", "noscript", "style", "textarea", "pre"],
+    //Those are the delimiters we are going to use to write latex formulas
     "delimiters":[
       {left: "$$", right: "$$", display: true},
       {left: "$", right: "$", display: false},

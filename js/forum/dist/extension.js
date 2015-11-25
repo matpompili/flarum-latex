@@ -8,17 +8,18 @@ System.register('matpompili/flarum-latex/main', ['flarum/extend', 'flarum/compon
   * file that was distributed with this source code.
   */
 
-  //import Composer from 'flarum/components/Composer';
-
   'use strict';
 
   var extend, CommentPost;
 
+  //This call KaTeX renderer with some options
   function render() {
     var elem = arguments.length <= 0 || arguments[0] === undefined ? document.body : arguments[0];
 
-    renderMathInElement(document.body, {
+    renderMathInElement(elem, {
+      //Do not render inside those tags
       "ignoredTags": ["script", "noscript", "style", "textarea", "pre"],
+      //Those are the delimiters we are going to use to write latex formulas
       "delimiters": [{ left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }]
     });
   }
@@ -29,11 +30,12 @@ System.register('matpompili/flarum-latex/main', ['flarum/extend', 'flarum/compon
       CommentPost = _flarumComponentsCommentPost['default'];
     }],
     execute: function () {
+
       app.initializers.add('matpompili-flarum-latex', function () {
+        //On every post loading
         extend(CommentPost.prototype, 'config', function () {
-          setTimeout(function () {
-            render(this.$('.Post-body'));
-          }, 50);
+          //Run KaTeX renderer on the single post (not on the entire page)
+          render(this.element);
         });
       });
     }
