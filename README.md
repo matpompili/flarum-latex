@@ -20,9 +20,13 @@ This is how the previous paragraph will look like:
 
 ## Install
 Install flarum-latex is really easy:
-- Get the extension in one these two ways:
-  1. Download the latest version with the **Download ZIP** button on the top right of this page, and extract it in your `flarum/extensions`. You can actually rename the folder (flarum-latex) anyway you want, it doesn't matter.
-  2. Clone this repository in your `flarum/extensions` folder with
+- Get the extension in one these three ways:
+  1. In your flarum folder run
+  ```
+  composer require matpompili/flarum-latex
+  ```
+  2. Download the latest version with the **Download ZIP** button on the top right of this page, and extract it in your `flarum/extensions`. You can actually rename the folder (flarum-latex) anyway you want, it doesn't matter.
+  3. Clone this repository in your `flarum/extensions` folder with
   ```
   git clone https://github.com/matpompili/flarum-latex.git matpompili-latex
   ```

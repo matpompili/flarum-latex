@@ -1,4 +1,4 @@
-System.register('matpompili/flarum-latex/main', ['flarum/extend', 'flarum/components/CommentPost'], function (_export) {
+System.register('matpompili/latex/main', ['flarum/extend', 'flarum/components/CommentPost'], function (_export) {
   /*
   * This file is part of flarum-latex.
   *
@@ -31,7 +31,7 @@ System.register('matpompili/flarum-latex/main', ['flarum/extend', 'flarum/compon
     }],
     execute: function () {
 
-      app.initializers.add('matpompili-flarum-latex', function () {
+      app.initializers.add('matpompili-latex', function () {
         //On every post loading
         extend(CommentPost.prototype, 'config', function () {
           //Run KaTeX renderer on the single post (not on the entire page)

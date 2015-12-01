@@ -10,7 +10,7 @@
 import { extend } from 'flarum/extend';
 import CommentPost from 'flarum/components/CommentPost';
 
-app.initializers.add('matpompili-flarum-latex', function() {
+app.initializers.add('matpompili-latex', function() {
   //On every post loading
   extend(CommentPost.prototype, 'config', function() {
       //Run KaTeX renderer on the single post (not on the entire page)

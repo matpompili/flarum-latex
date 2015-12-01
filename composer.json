@@ -1,5 +1,5 @@
 {
-    "name": "matpompili/flarum-latex",
+    "name": "matpompili/latex",
     "description": "Provides LaTeX functionalitty to Flarum",
     "version": "v0.1.0",
     "type": "flarum-extension",

@@ -23,7 +23,7 @@ return function (Dispatcher $events) {
       $event->view->addHeadString('<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>');
       $event->view->addHeadString('<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/contrib/auto-render.min.js"></script>');
       //add main.js
-      $event->addBootstrapper('matpompili/flarum-latex/main');
+      $event->addBootstrapper('matpompili/latex/main');
     }
   });
   /*

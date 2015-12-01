@@ -2,7 +2,7 @@ var flarum = require('flarum-gulp');
 
 flarum({
   modules: {
-    'matpompili/flarum-latex': [
+    'matpompili/latex': [
       'src/**/*.js'
     ]
   }
