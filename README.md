@@ -19,18 +19,21 @@ This is how the previous paragraph will look like:
 ![Imgur](http://i.imgur.com/BhEIDD0.png "This is how the previous paragraph will look like")
 
 ## Install
-Install flarum-latex is really easy:
-- Get the extension in one these three ways:
-  1. In your flarum folder run
+The easiest way to get flarum-latex is with composer: in your flarum folder run
   ```
   composer require matpompili/flarum-latex
   ```
-  2. Download the latest version with the **Download ZIP** button on the top right of this page, and extract it in your `flarum/extensions`. You can actually rename the folder (flarum-latex) anyway you want, it doesn't matter.
-  3. Clone this repository in your `flarum/extensions` folder with
+Then enable it you administration panel. Done!
+### Other ways to install
+If you don't want to use composer, you can get the extension in one these two ways:
+  1. Clone this repository in your `flarum/extensions` folder with
   ```
   git clone https://github.com/matpompili/flarum-latex.git matpompili-latex
   ```
-- Enable it you administration panel. Done!
+  2. Download the latest version with the **Download ZIP** button on the top right of this page, and extract it in your `flarum/extensions`. Rename the extracted folder to `matpompili-latex`.
+
+You will still need to enable it.
+
 
 ## Usage
 You can write mathematical expressions in the composer and when the post is submitted it will be rendered correctly, even if the preview is messed up by Markdown, BBCode and emojis.

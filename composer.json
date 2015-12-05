@@ -1,6 +1,7 @@
 {
     "name": "matpompili/latex",
     "description": "Provides LaTeX functionalitty to Flarum",
+    "version": "v1.0.0",
     "type": "flarum-extension",
     "license":"MIT",
     "authors": [
